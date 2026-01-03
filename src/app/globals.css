@@ -22,7 +22,7 @@
   --bg-primary: #0b1410;
   --bg-secondary: #13201a;
 
-  --text-primary: #ffffff; /* Name & headings */
+  --text-primary: #ffffff;      /* Name & headings */
   --text-secondary: #b7cfc2;
 
   --accent: #22c55e;
@@ -78,15 +78,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-/* 🔥 FIXED SECTION TITLE */
-.section-title {
-  display: inline-block;
-  white-space: nowrap;                /* 🔴 MAIN FIX */
-  text-align: center;
-  font-weight: 700;
-  font-size: clamp(1.4rem, 4vw, 2.4rem);
-}
-
 p {
   color: var(--text-secondary);
 }
@@ -122,15 +113,6 @@ section {
 }
 
 /* ===============================
-   SKILLS SECTION SAFETY
-================================ */
-
-#skills {
-  text-align: center;
-  overflow-x: auto; /* mobile safety */
-}
-
-/* ===============================
    RESPONSIVE
 ================================ */
 
@@ -141,7 +123,7 @@ section {
 }
 
 /* ===============================
-   SYSTEM DARK MODE SUPPORT
+   SYSTEM DARK SUPPORT
 ================================ */
 
 @media (prefers-color-scheme: dark) {
@@ -149,3 +131,4 @@ section {
     color-scheme: dark;
   }
 }
+

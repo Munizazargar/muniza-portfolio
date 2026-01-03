@@ -80,7 +80,7 @@ export default function About() {
               <h4 style={{ color: 'var(--accent)', marginBottom: '0.5rem' }}>
                 📍 Location
               </h4>
-              <p style={{ color: 'var(--text-secondary)' }}>Jammu, India</p>
+              <p style={{ color: 'var(--text-secondary)' }}>Kashmir, India</p>
             </motion.div>
             
             <motion.div
