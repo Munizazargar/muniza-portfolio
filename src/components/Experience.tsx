@@ -1,12 +1,36 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 export default function Experience() {
   return (
     <section id="experience" style={{ background: 'var(--bg-secondary)' }}>
-      <h2 className="section-title">Experience</h2>
+      <motion.h2 
+        className="section-title"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        Experience
+      </motion.h2>
       
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         <div className="timeline">
-          <div className="timeline-item">
-            <div className="card">
+          <motion.div 
+            className="timeline-item"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div 
+              className="card"
+              whileHover={{ 
+                y: -5,
+                transition: { duration: 0.3 }
+              }}
+            >
               <div style={{ 
                 display: 'flex', 
                 justifyContent: 'space-between', 
@@ -16,29 +40,53 @@ export default function Experience() {
                 marginBottom: '1rem' 
               }}>
                 <div>
-                  <h3 style={{ 
-                    color: 'var(--accent)', 
-                    fontSize: '1.5rem' 
-                  }}>
+                  <motion.h3 
+                    style={{ 
+                      color: 'var(--accent)', 
+                      fontSize: '1.5rem' 
+                    }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                  >
                     Full Stack Development Trainee
-                  </h3>
-                  <p style={{ 
-                    color: 'var(--text-secondary)', 
-                    fontSize: '1.125rem' 
-                  }}>
+                  </motion.h3>
+                  
+                  <motion.p 
+                    style={{ 
+                      color: 'var(--text-secondary)', 
+                      fontSize: '1.125rem' 
+                    }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                  >
                     Interface Technologies
-                  </p>
+                  </motion.p>
                 </div>
-                <span style={{ 
-                  background: 'var(--accent)', 
-                  color: 'white', 
-                  padding: '0.5rem 1rem', 
-                  borderRadius: '20px',
-                  fontSize: '0.875rem',
-                  fontWeight: '600'
-                }}>
+                
+                <motion.span 
+                  style={{ 
+                    background: 'var(--accent)', 
+                    color: 'white', 
+                    padding: '0.5rem 1rem', 
+                    borderRadius: '20px',
+                    fontSize: '0.875rem',
+                    fontWeight: '600'
+                  }}
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 200,
+                    delay: 0.4 
+                  }}
+                >
                   Aug 2024 - Dec 2025
-                </span>
+                </motion.span>
               </div>
               
               <ul style={{ 
@@ -48,69 +96,36 @@ export default function Experience() {
                 flexDirection: 'column',
                 gap: '0.75rem'
               }}>
-                <li style={{ 
-                  paddingLeft: '1.5rem', 
-                  position: 'relative', 
-                  color: 'var(--text-secondary)' 
-                }}>
-                  <span style={{ 
-                    position: 'absolute', 
-                    left: 0, 
-                    color: 'var(--accent)' 
-                  }}>▹</span>
-                  Built CRUD-based applications using C# and SQL, strengthening core backend and database fundamentals
-                </li>
-                <li style={{ 
-                  paddingLeft: '1.5rem', 
-                  position: 'relative', 
-                  color: 'var(--text-secondary)' 
-                }}>
-                  <span style={{ 
-                    position: 'absolute', 
-                    left: 0, 
-                    color: 'var(--accent)' 
-                  }}>▹</span>
-                  Developed responsive web applications using HTML, CSS, ASP.NET MVC, and Web API
-                </li>
-                <li style={{ 
-                  paddingLeft: '1.5rem', 
-                  position: 'relative', 
-                  color: 'var(--text-secondary)' 
-                }}>
-                  <span style={{ 
-                    position: 'absolute', 
-                    left: 0, 
-                    color: 'var(--accent)' 
-                  }}>▹</span>
-                  Developed frontend applications using React.js with state management via Redux and Context API
-                </li>
-                <li style={{ 
-                  paddingLeft: '1.5rem', 
-                  position: 'relative', 
-                  color: 'var(--text-secondary)' 
-                }}>
-                  <span style={{ 
-                    position: 'absolute', 
-                    left: 0, 
-                    color: 'var(--accent)' 
-                  }}>▹</span>
-                  Built and integrated RESTful APIs using Node.js and Express.js with MongoDB
-                </li>
-                <li style={{ 
-                  paddingLeft: '1.5rem', 
-                  position: 'relative', 
-                  color: 'var(--text-secondary)' 
-                }}>
-                  <span style={{ 
-                    position: 'absolute', 
-                    left: 0, 
-                    color: 'var(--accent)' 
-                  }}>▹</span>
-                  Used Postman for API testing and collaborated following Agile practices
-                </li>
+                {[
+                  'Built CRUD-based applications using C# and SQL, strengthening core backend and database fundamentals',
+                  'Developed responsive web applications using HTML, CSS, ASP.NET MVC, and Web API',
+                  'Developed frontend applications using React.js with state management via Redux and Context API',
+                  'Built and integrated RESTful APIs using Node.js and Express.js with MongoDB',
+                  'Used Postman for API testing and collaborated following Agile practices'
+                ].map((item, i) => (
+                  <motion.li 
+                    key={i}
+                    style={{ 
+                      paddingLeft: '1.5rem', 
+                      position: 'relative', 
+                      color: 'var(--text-secondary)' 
+                    }}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 + i * 0.1 }}
+                  >
+                    <span style={{ 
+                      position: 'absolute', 
+                      left: 0, 
+                      color: 'var(--accent)' 
+                    }}>▹</span>
+                    {item}
+                  </motion.li>
+                ))}
               </ul>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
