@@ -16,7 +16,7 @@ export default function Projects() {
         'Database integration with SQL Server',
         'Responsive design'
       ],
-      github: 'https://github.com/munizazargar/edu-hub',
+      github: 'https://github.com/Munizazargar/EduHub',
       demo: ''
     },
     {
