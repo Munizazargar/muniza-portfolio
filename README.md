@@ -34,3 +34,38 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+Installation Guide
+
+
+npx create-next-app@latest muniza-portfolio
+# Choose the following options:
+ TypeScript? Yes
+ ESLint? Yes
+Tailwind CSS? No
+`src/` directory? Yes
+ App Router? Yes
+ default import alias? No
+
+cd muniza-portfolio
+npm run dev
+
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Experience.tsx
+│   ├── Projects.tsx
+│   ├── Skills.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+├── context/
+│   └── ThemeContext.tsx
+└── styles/
+    └── components.css

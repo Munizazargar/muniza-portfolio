@@ -15,7 +15,9 @@ export default function Projects() {
         'User authentication and authorization',
         'Database integration with SQL Server',
         'Responsive design'
-      ]
+      ],
+      github: 'https://github.com/munizazargar/edu-hub',
+      demo: ''
     },
     {
       title: 'Job Portal',
@@ -28,7 +30,23 @@ export default function Projects() {
         'Job posting and application system',
         'Real-time updates and notifications'
       ],
-      status: 'In Progress'
+      status: 'In Progress',
+      github: 'https://github.com/Munizazargar/jobGenesisBackend',
+      demo: ''
+    },
+    {
+      title: 'Devs Outreach',
+      period: '2024-2025',
+      description: 'Developer community platform built with modern web technologies',
+      technologies: ['TypeScript', 'Next.js'],
+      features: [
+        'Modern React-based architecture',
+        'Type-safe development with TypeScript',
+        'Server-side rendering with Next.js',
+        'Optimized performance and SEO'
+      ],
+      github: 'https://github.com/Munizazargar/Devs_Outreach',
+      demo: ''
     }
   ];
 
@@ -169,6 +187,76 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
           </motion.li>
         ))}
       </ul>
+
+      {/* Project Links */}
+      <div style={{
+        display: 'flex',
+        gap: '1rem',
+        marginTop: '1.5rem',
+        paddingTop: '1.5rem',
+        borderTop: '1px solid var(--border)'
+      }}>
+        {project.github && (
+          <motion.a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.5rem 1rem',
+              background: 'var(--bg-primary)',
+              border: '1px solid var(--border)',
+              borderRadius: '8px',
+              color: 'var(--text-primary)',
+              fontSize: '0.875rem',
+              fontWeight: '500',
+              transition: 'all 0.3s ease'
+            }}
+            whileHover={{ 
+              scale: 1.05, 
+              y: -2,
+              borderColor: 'var(--accent)',
+              boxShadow: '0 4px 12px rgba(102, 126, 234, 0.2)'
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>💻</span>
+            GitHub
+          </motion.a>
+        )}
+
+        {project.demo && (
+          <motion.a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.5rem 1rem',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              border: 'none',
+              borderRadius: '8px',
+              color: 'white',
+              fontSize: '0.875rem',
+              fontWeight: '500',
+              transition: 'all 0.3s ease'
+            }}
+            whileHover={{ 
+              scale: 1.05, 
+              y: -2,
+              boxShadow: '0 4px 12px rgba(102, 126, 234, 0.4)'
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>🚀</span>
+            Live Demo
+          </motion.a>
+        )}
+      </div>
     </motion.div>
   );
 }
