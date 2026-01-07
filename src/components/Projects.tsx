@@ -6,12 +6,12 @@ import { useState } from 'react';
 export default function Projects() {
   const projects = [
     {
-      title: 'Edu Hub (LMS)',
+      title: 'Edu Hub ',
       period: '2022-2023',
-      description: 'Educational web application with complete learning management features',
+      description: 'Blog-based educational content management application.',
       technologies: ['ASP.NET MVC', 'C#', 'SQL Server', 'Authentication'],
       features: [
-        'CRUD operations for course management',
+        'CRUD operations for content management',
         'User authentication and authorization',
         'Database integration with SQL Server',
         'Responsive design'

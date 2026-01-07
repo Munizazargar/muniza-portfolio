@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Mail, Github, Linkedin, FileDown } from 'lucide-react';
 import Background3D from './Background3d';
 
 export default function Hero() {
@@ -35,7 +36,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Full Stack Developer
+          Full Stack Developer | MERN Stack
         </motion.p>
         
         <motion.p 
@@ -49,8 +50,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          BSc-IT from University of Kashmir. Passionate about building modern web applications 
-          with React, Next.js, and .NET technologies.
+         Building scalable web applications with modern frontend, REST APIs, databases, and production-ready deployments.
         </motion.p>
         
         <motion.div 
@@ -81,11 +81,12 @@ export default function Hero() {
             href="/resume.pdf" 
             download="Muniza_Zargar_Resume.pdf"
             className="btn btn-secondary"
-            style={{ display: 'inline-block' }}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            📄 Download Resume
+            <FileDown size={20} />
+            Download Resume
           </motion.a>
         </motion.div>
 
@@ -104,7 +105,7 @@ export default function Hero() {
             whileHover={{ scale: 1.2, rotate: 5, y: -5 }}
             whileTap={{ scale: 0.9 }}
           >
-            📧
+            <Mail size={24} />
           </motion.a>
           
           <motion.a 
@@ -116,7 +117,7 @@ export default function Hero() {
             whileHover={{ scale: 1.2, rotate: -5, y: -5 }}
             whileTap={{ scale: 0.9 }}
           >
-            💻
+            <Github size={24} />
           </motion.a>
           
           <motion.a 
@@ -128,7 +129,7 @@ export default function Hero() {
             whileHover={{ scale: 1.2, rotate: 5, y: -5 }}
             whileTap={{ scale: 0.9 }}
           >
-            💼
+            <Linkedin size={24} />
           </motion.a>
         </motion.div>
 

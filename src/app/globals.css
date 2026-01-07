@@ -4,10 +4,10 @@
 
 /* 🌞 LIGHT MODE */
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
+  --bg-primary: #361313;
+  --bg-secondary: #71767b;
 
-  --text-primary: #0f172a;
+  --text-primary: #ececec;
   --text-secondary: #475569;
 
   --accent: #22c55e;

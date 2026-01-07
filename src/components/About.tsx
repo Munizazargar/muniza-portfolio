@@ -38,10 +38,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            I'm a Full Stack Developer currently pursuing my BSc in Information Technology 
-            at the University of Kashmir. I specialize in building modern, responsive web 
-            applications using cutting-edge technologies like React.js, Next.js, Node.js, 
-            and .NET framework.
+          I am a Full Stack Developer with hands-on experience in building modern, responsive, and scalable web applications.
+          I work across both frontend and backend development using React.js, Next.js, Node.js, and the .NET framework.
+          I specialize in developing RESTful APIs, integrating SQL and NoSQL databases, managing code with Git, and deploying applications with a focus on clean architecture, performance, and production readiness.
           </motion.p>
           
           <motion.p 
@@ -56,9 +55,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Currently working as a Full Stack Development Trainee at Interface Technologies, 
-            where I'm gaining hands-on experience with both frontend and backend development, 
-            following clean architecture principles and Agile practices.
+            I focus on building scalable, maintainable applications with clean architecture, modern development practices, and Agile methodologies.
           </motion.p>
 
           <motion.div 
