@@ -47,7 +47,22 @@ export default function Projects() {
       ],
       github: 'https://github.com/Munizazargar/Devs_Outreach',
       demo: ''
+    },
+      {
+      title: 'Wular i Tech solutions',
+      period: '2025-2026',
+      description: 'delivering modern solution to real world problems',
+      technologies: ['dotnet mvc architecture','c#,html,css,js'],
+      features: [
+        'Modern React-based architecture',
+        'Type-safe development with TypeScript',
+        'Server-side rendering with Next.js',
+        'Optimized performance and SEO'
+      ],
+      github: 'https://github.com/Munizazargar/Client',
+      demo: ''
     }
+
   ];
 
   return (
